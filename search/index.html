@@ -33,19 +33,21 @@
                     border : 1px solid rgba(128, 128, 128, 0.637);
                     font-size: 16px;
                     height: 44px;
-                    padding-bottom: 15px;
-                    padding-top: 15px;
+                    padding-bottom: 15px; /* For Positionning of input field */
+                    padding-top: 15px; /* For Positionning of input field */
                     font: arial,sans-serif;
                     line-height: 34px;
                     border-radius: 25px; 
                     width: 560px;
+                    padding: 10px 20px; /* Ensure white space in front and at end of input search query*/
                 }
 
                 #query:hover{
                     outline: none;
                    /* border: 2px solid; */
                    box-shadow: 0 0 10px rgba(128, 128, 128, 0.466);
-                   width: 565px /* Noticed an effect where size of input is slightly increased*/
+                   width: 565px ;/* Noticed an effect where size of input is slightly increased*/
+                   
                 }
                 #contents{
                     text-align: center;
@@ -57,6 +59,7 @@
                     width: 100%;
                     background-color: #e2e2e2b6;
                     padding: 10px;
+                    
                 }
                 #FooterLinks{
                     color: rgb(83, 82, 82) ;
@@ -70,7 +73,7 @@
                     padding-left: 27px;
                 }
                 #rightSideFooter{
-                    padding-left: 920px;
+                    padding-left: 59%;
                 }
                 #HeaderLinks{
                     text-align: right;
@@ -83,6 +86,7 @@
                     color:rgb(41, 40, 40);
                     font-family: arial,sans-serif;
                 }
+                
             </style>
     </head>
     <body>
@@ -96,7 +100,9 @@
 
                 <div style="padding: 15px;"> <!-- To ensure spacing between logo and search  --></div>
                 <form action="https://google.com/search" method="GET">
-                    <input type="text" id="query" name="q" list="searchList">
+                    <label id="svgElementQueryAndMic"> 
+                        <input type="text" id="query" name="q" list="searchList">
+                    </label>
                     <!-- <datalist id="searchList">
 
                         <option> Hello </option>
@@ -113,7 +119,7 @@
             
                 </form>
                 <div style="padding: 10px;"> <!-- To ensure spacing between Search and Buttons  --></div>
-                <p style="font-size:13px"> Google offered in : <a href=""> English </a></p>
+                <p style="font-size:13px"> Google offered in : <a href="https://www.google.com/setprefs?sig=0_uV1TTCWNE2zJD0UdCPscFL_GQkk%3D&hl=fr&source=homepage&sa=X&ved=0ahUKEwjB_c_6hsjqAhVL8uAKHXmcBHoQ2ZgBCA8"> English </a> &nbsp; <a href="https://www.google.com/setprefs?sig=0_uV1TTCWNE2zJD0UdCPscFL_GQkk%3D&hl=fr&source=homepage&sa=X&ved=0ahUKEwjB_c_6hsjqAhVL8uAKHXmcBHoQ2ZgBCA8"> French </a></p>
         </div>
 
         <div id="footer">            
