@@ -29,17 +29,23 @@
                 }
 
                 #query{
+                    outline: none;
+                    border : 1px solid rgba(128, 128, 128, 0.637);
                     font-size: 16px;
-                    height: 34px;
+                    height: 44px;
                     padding-bottom: 15px;
                     padding-top: 15px;
                     font: arial,sans-serif;
                     line-height: 34px;
-                   /*  border-radius: 25px; */
+                    border-radius: 25px; 
+                    width: 560px;
                 }
 
                 #query:hover{
-                    border: 2px solid;
+                    outline: none;
+                   /* border: 2px solid; */
+                   box-shadow: 0 0 10px rgba(128, 128, 128, 0.466);
+                   width: 565px /* Noticed an effect where size of input is slightly increased*/
                 }
                 #contents{
                     text-align: center;
@@ -103,7 +109,7 @@
                     <input type="submit" class="GoogleBtn" value="Google Search">  
                     
                     
-                    <button type="button" class="GoogleBtn"> <a href="https://www.google.com/doodles/"> I'm Feeling Lucky</a></button>
+                    <button type="button" class="GoogleBtn" > <a href="https://www.google.com/doodles/" style="text-decoration: none; color:#5F6368;"> I'm Feeling Lucky</a></button>
             
                 </form>
                 <div style="padding: 10px;"> <!-- To ensure spacing between Search and Buttons  --></div>
