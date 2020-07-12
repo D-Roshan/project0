@@ -4,8 +4,9 @@
         <link rel="icon" href="https://www.google.com/s2/favicons?domain=www.google.com" type="image/x-icon" />
         <title>Google</title>
         <!-- CSS only -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <style>
                 
                 .GoogleBtn{
@@ -38,15 +39,15 @@
                     font: arial,sans-serif;
                     line-height: 34px;
                     border-radius: 25px; 
-                    width: 560px;
-                    padding: 10px 20px; /* Ensure white space in front and at end of input search query*/
+                    width: 565px;
+                    padding: 20px 35px; /* Ensure white space in front and at end of input search query*/
                 }
 
                 #query:hover{
                     outline: none;
                    /* border: 2px solid; */
                    box-shadow: 0 0 10px rgba(128, 128, 128, 0.466);
-                   width: 565px ;/* Noticed an effect where size of input is slightly increased*/
+                   width: 565px ;/* Noticed an effect where size of input is slightly increased(35 (right/left) is the value which handles this setting)*/
                    
                 }
                 #contents{
@@ -73,7 +74,10 @@
                     padding-left: 27px;
                 }
                 #rightSideFooter{
-                    padding-left: 59%;
+                    padding-left: 59%; 
+                   
+                
+
                 }
                 #HeaderLinks{
                     text-align: right;
@@ -86,7 +90,37 @@
                     color:rgb(41, 40, 40);
                     font-family: arial,sans-serif;
                 }
+                .iconInInput {
+                    position: relative;
+                    
+                }
+
+                .iconInInput i{
+                    position: absolute;
                 
+                    left:370px;
+                    top: 4px;
+                    padding: 10px 9px;
+                }
+                @media (max-width: 640px) {  /* For Mobiles */
+
+                    #iconInInput{
+                        
+
+                    }
+
+                    .fa-microphone{
+
+
+                    }
+
+                    body{
+                        background-color: red;;
+                    }
+                    
+
+
+                }
             </style>
     </head>
     <body>
@@ -96,13 +130,18 @@
             <a href="" class="ToplinkSpacers"> Advanced Search</a>
         </div>
         <div id="contents"> 
-                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" style="color:grey;">
 
-                <div style="padding: 15px;"> <!-- To ensure spacing between logo and search  --></div>
+                <div style="padding: 14px;"> <!-- To ensure spacing between logo and search  --></div>
                 <form action="https://google.com/search" method="GET">
-                    <label id="svgElementQueryAndMic"> 
+
+                    <div class="iconInInput"> 
                         <input type="text" id="query" name="q" list="searchList">
-                    </label>
+                        <i class="fa fa-search" style="color: grey;" aria-hidden="true" ></i>
+
+                        <i class="fa fa-microphone" style="padding-left: 530px; color:rgb(74, 74, 248);" aria-hidden="true" title="Search by Voice"></i>
+                    </div>
+
                     <!-- <datalist id="searchList">
 
                         <option> Hello </option>
@@ -115,8 +154,8 @@
                     <input type="submit" class="GoogleBtn" value="Google Search">  
                     
                     
-                    <button type="button" class="GoogleBtn" > <a href="https://www.google.com/doodles/" style="text-decoration: none; color:#5F6368;"> I'm Feeling Lucky</a></button>
-            
+                <!--   <button type="button" class="GoogleBtn" > <a href="https://www.google.com/doodles/" style="text-decoration: none; color:#5F6368;"> I'm Feeling Lucky</a></button>  --> 
+                    
                 </form>
                 <div style="padding: 10px;"> <!-- To ensure spacing between Search and Buttons  --></div>
                 <p style="font-size:13px"> Google offered in : <a href="https://www.google.com/setprefs?sig=0_uV1TTCWNE2zJD0UdCPscFL_GQkk%3D&hl=fr&source=homepage&sa=X&ved=0ahUKEwjB_c_6hsjqAhVL8uAKHXmcBHoQ2ZgBCA8"> English </a> &nbsp; <a href="https://www.google.com/setprefs?sig=0_uV1TTCWNE2zJD0UdCPscFL_GQkk%3D&hl=fr&source=homepage&sa=X&ved=0ahUKEwjB_c_6hsjqAhVL8uAKHXmcBHoQ2ZgBCA8"> French </a></p>
